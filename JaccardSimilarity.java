@@ -1,9 +1,5 @@
 import java.io.*;
 import java.util.*;
-// Ahmed Mostafa Abdelkarim ID: 20180031
-// Eslam Sameh Hamdy   ID: 20180045
-// Youssef Sayed Ahmed ID: 20180342
-// Mahmoud Essam Eldin  ID: 20180359
 
 //=====================================================================
 class Index {
@@ -77,7 +73,7 @@ public class JaccardSimilarity {
 
         index.builtIndex(new String[]{
                 "docs\\100.txt",
-                "docs\\101.txt",
+                "docs\\101.txt",        // here is an array of documents names change it with yours 
                 "docs\\102.txt",
                 "docs\\103.txt",
                 "docs\\104.txt"});
