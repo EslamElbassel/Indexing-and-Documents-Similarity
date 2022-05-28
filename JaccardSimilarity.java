@@ -26,10 +26,10 @@ class Index {
         try (BufferedReader file = new BufferedReader(new FileReader(fileName))) {
             String ln;
             while ((ln = file.readLine()) != null) {
-                String[] words = ln.split("\\W+");  // toknize each line using white space 
+                String[] words = ln.split("\\W+");      // toknize each line using white space 
                 
                 for (String word : words) {
-                    document.add(word.toLowerCase());  // converting words to lowecase before adding them into the set
+                    document.add(word.toLowerCase());   // converting words to lowecase before adding them into the set
                 }
             }
         } catch (IOException e) {
@@ -51,10 +51,10 @@ class Index {
         // treemap of (key: similarity score in descending order, value: docName)
         TreeMap<Float, String> jSimilarities = new TreeMap<Float, String>(Collections.reverseOrder()); 
         
-        sentence = sentence.trim();   // Removing leading and trailing spaces
+        sentence = sentence.trim();                 // Removing leading and trailing spaces
         System.out.println(sentence);
         HashSet<String> sentenceWords = new HashSet<String>();
-        String[] words = sentence.split("\\W+");  // toknize the search query (sentence) using white space 
+        String[] words = sentence.split("\\W+");    // toknize the search query (sentence) using white space 
         for (String word : words){
             sentenceWords.add(word.toLowerCase());  // adding sentence words to a set 
         }
